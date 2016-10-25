@@ -27,3 +27,5 @@ Git
     
 
 Heroku
+    - git push heroku master
+    

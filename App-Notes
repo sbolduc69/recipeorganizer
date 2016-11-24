@@ -21,7 +21,7 @@ User stuff
 ========== git and heroku workflow =====
 Git
     - git status
-    - git add files
+    - git add -A
     - git commit -m "some descriptive message"; commits to HEAD
     git push origin master; send your changes to remote repo
     

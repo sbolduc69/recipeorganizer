@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   # get '/recipes/:id', to: 'recipes#show', as: 'recipe_path'
   # delete 'recipes/:id', to: 'recipes#destroy'
   
-  # resources :recipes do
-  #   member do
-  #     post 'like'
-  #   end
-  # end
+  resources :recipes do
+    member do
+      post 'like'
+    end
+  end
 end

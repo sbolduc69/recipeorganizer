@@ -1,37 +1,20 @@
 <p>
     <h1><%= @recipe.name %></h1>
 </p>
+
 <div class="row"> 
   <div class="col-md-4 pull-right center">
-        <%= gravatar_for @recipe.chef, size: 200)
+        <%= gravatar_for @recipe.chef, size: 200 %>
         <p>
           <h5>Created for you by: <%= @recipe.chef.chefname %></h5>
         </p>
   </div>
   <div class="col-md-8 ">
-        <% if logged_in?  and  @recipe.chef == current_user %>
-          <%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-right" %>
-        <% end %>
         <h3><%= @recipe.summary %></h3> 
-        <div class="show_recipe">
-          <%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
-        </div>
         <div class="well">
-            <p>Style: <%= render @recipe.styles %></p>
-            <p>Ingredient: <%= render @recipe.ingredients %></p>
-            <p><strong> Steps:  </strong></p>
-            <%= (@recipe.description) %>
-            
-            <div class="pull-right">
-              <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
-                 <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp <%= @recipe.thumbs_up_total %>
-              <% end %> &nbsp&nbsp&nbsp&nbsp
-              
-              <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
-                 <i class="glyphicon glyphicon-thumbs-down"></i>&nbsp <%= @recipe.down_total %>
-              <% end %>
-              
-            </div>
+            <p><%= (@recipe.description) %></p>
             
         </div>
   </div>
+  
+  <h5><%= link_to "Return to Recipes Page", recipes_path, class: "btn btn-warning btn-small" %></h5>

@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1, h1.jumbotron, h2, h3, h4 {
     line-height: 1;
 
 }
@@ -55,6 +55,14 @@ h1 {
     text-align: center;
 }
 
+h1.jumbotron {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    
+}
 
 h2 {
   font-size: 1.2em;

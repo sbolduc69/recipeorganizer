@@ -1,7 +1,17 @@
 <h1>All Recipes</h1>
 <hr/>
 
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Recipes", recipes_path %>
+  </li>
+  <li>
+    <%= link_to "Chefs", "" %>
+  </li>
+</ul>
+
 <% @recipes.each do |recipe| %>
+    <hr />
     <div class="row">
         <div class="col-md-2">
             <section class="chef_intro center">
@@ -10,7 +20,7 @@
             </section>
         </div>
         
-        <div class="col-lg-8 well">
+        <div class="col-lg-6 well">
             <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
             <p><%= recipe.summary %></p>
             <p>

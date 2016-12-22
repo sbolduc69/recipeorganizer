@@ -13,13 +13,6 @@ class Recipe < ActiveRecord::Base
   validate :picture_size
   default_scope -> { order(updated_at: :desc) }
   
-  private
-    def picture_size
-      if picture.size > 5.megabytes
-        errors.add(:picture, "Should be less than 5MB")
-      end
-    end
-    
   def thumbs_up_total
     self.likes.where(like: true).size
   end
@@ -27,5 +20,14 @@ class Recipe < ActiveRecord::Base
   def thumbs_down_total
     self.likes.where(like: false).size    
   end
+  
+  private
+    def picture_size
+      if picture.size > 5.megabytes
+        errors.add(:picture, "Should be less than 5MB")
+      end
+    end
+    
+ 
   
 end

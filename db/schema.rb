@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220235110) do
+ActiveRecord::Schema.define(version: 20161228175447) do
 
 # Could not dump table "articles" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20161220235110) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 # Could not dump table "comments" because of following NoMethodError

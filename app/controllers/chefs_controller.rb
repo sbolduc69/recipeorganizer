@@ -1,7 +1,7 @@
 class ChefsController < ApplicationController
-   before_action :set_chef, only: [:edit, :update, :show]
-   before_action :require_user, except: [:show, :index]
-   before_action :require_same_user, only: [:edit, :update] 
+#   before_action :set_chef, only: [:edit, :update, :show]
+#   before_action :require_user, except: [:show, :index]
+#   before_action :require_same_user, only: [:edit, :update] 
    
    
     def index
@@ -14,7 +14,7 @@ class ChefsController < ApplicationController
    
     def create
        @chef = Chef.new(chef_params)
-       if @chef.save
+        if @chef.save
            flash[:success] = "You have successfully created a Chef account"
            redirect_to recipes_path
         else
@@ -36,8 +36,8 @@ class ChefsController < ApplicationController
     end
     
     def show
-        @chef = Chef.find(params[:id])
-        @recipes = @chef.recipes.paginate(page: params[:page], per_page: 3)
+      @chef = Chef.find(params[:id])
+      @recipes = @chef.recipes.paginate(page: params[:page], per_page: 3)
     end
   
     private

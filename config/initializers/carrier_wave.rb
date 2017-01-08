@@ -4,8 +4,9 @@ if Rails.env.production?
       config.storage  = :aws
       config.aws_bucket = ENV['S3_BUCKET']
       config.aws_credentials = {
-        :access_key_id => ENV['S3_ACCESS_KEY'],
-        :secret_access_key => ENV['S3_SECRET_KEY']
+        access_key_id: => ENV['S3_ACCESS_KEY'],
+        secret_access_key: => ENV['S3_SECRET_KEY'],
+        region: =>  ENV.fetch('AWS_REGION')
        } 
        
     end

@@ -8,6 +8,7 @@ Database foo
  - Run the migration
     - 'rake db:migrate'
     
+http://www.postgresqltutorial.com/psql-commands/
     
 =========== Rails Console foo ==========
 Display all users 

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
   
   def current_user
-    @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id]
+    @current_user ||= Chef.find(session[:id]) if session[:id]
   end
   
   def logged_in?
@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
   
   def require_user
     if !logged_in?
-      flash[:danger] ="You must be logged int to perform this action"
-      redirect_to :back
+      flash[:danger] ="You must be logged in to perform this action"
+      redirect_to root_path
     end
   end
 end

@@ -1,11 +1,10 @@
+This project was created almost entirely from a Udemy course posted by github user abdallawi. I've made visual alternations
+and functionality I deemed suitable for my users. My site can be found at recipebarrel.com
 
-
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://recipeorganizer-sbolduc69.c9users.io/).
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+New Features coming.
+    1. Facebook Oauth
+    2. Comments section
+    3. Mobile and Web UI improvements
+    4. Gravatar instructions to create and upload.
+    5. Facebook and pinterest recipe post integration
+    6. Admin functions

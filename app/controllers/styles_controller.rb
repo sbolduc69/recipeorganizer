@@ -1,4 +1,5 @@
 class StylesController < ApplicationController
+    before_action :require_user, ecept: [:show]
     
     def show
         @style = Style.find(params[:id])
@@ -12,11 +13,11 @@ class StylesController < ApplicationController
     def create
        @style = Style.new(style_params)
        if @style.save
-           flash[:success] = "Style was created successfully"
+           flash[:success] = " #{@style} Style was created successfully"
            redirect_to recipes_path
-        else
-            render 'new'
-        end
+       else
+           render :new
+       end
     end
     
     private

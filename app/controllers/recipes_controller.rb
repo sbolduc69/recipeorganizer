@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:edit, :show, :update, :like]
-  before_action :require_user, ecept: [:show, :index]
+  before_action :require_user, except: [:show, :index, :like]
+  before_action :require_user_like, only: [:like]
   before_action :require_same_user, only: [:edit, :update] 
 
     def index
@@ -31,7 +32,6 @@ class RecipesController < ApplicationController
   
    def update
         if @recipe.update(recipe_params)
-            #do something
             flash[:success] = "The recipe has been updated"
             redirect_to recipe_path(@recipe)
         else

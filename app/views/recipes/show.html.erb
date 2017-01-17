@@ -20,6 +20,7 @@
             <p>Ingredients: <%= render @recipe.ingredients %></p>
             <p><strong>Steps:</strong></p>
             <%= simple_format(@recipe.description) %>
+            
             <div class="pull-right">
               <%= link_to like_recipe_path(@recipe, like:true), method: :post do  %>
                 <i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= @recipe.thumbs_up_total %>
@@ -32,7 +33,6 @@
             </div>
         </div>
   </div>
-  <hr/>
 </div>
-<div><h5><%= link_to "Return to Recipes Page", recipes_path, class: "btn btn-warning btn-small" %></h5></div>
+<%= link_to "Return to Recipes Page", recipes_path, class: "btn btn-warning btn-small" %>
 

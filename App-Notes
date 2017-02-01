@@ -1,32 +1,3 @@
-Database foo
- - Rails create migration
-    'rails generate migration "name"'
- - Add data to migration under db/migrate
- - Build model for "name"
-    - create tables, columns, etc..
-    - www Resource: ActiveRecord associations
- - Run the migration
-    - 'rake db:migrate'
-    
-http://www.postgresqltutorial.com/psql-commands/
-    
-=========== Rails Console foo ==========
-Display all users 
-    - User.all 
-Create users
-    - User.create(username: "Bob", email: "bob@test.com")
-User stuff
-    - user = User.find_by email: 'joe@example.com' 
-    - now User is your local variable
-    
-========== git and heroku workflow =====
-Git
-    - git status
-    - git add -A
-    - git commit -m "some descriptive message"; commits to HEAD
-    git push origin master; send your changes to remote repo
-    
 
-Heroku
-    - git push heroku master
+http://www.postgresqltutorial.com/psql-commands/
     
